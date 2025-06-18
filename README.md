@@ -1,21 +1,17 @@
 
----
-
 ```markdown
 # 🧠 ML Pipeline with Flask, Kafka, gRPC, and SQLite
 
 This project demonstrates a Machine Learning pipeline using:
-- **Flask API** for receiving prediction input
-- **Kafka** for message streaming
-- **gRPC microservice** for saving results
-- **SQLite** for persistent storage
-- **Classification** and **Regression** ML models (Iris dataset)
-
----
+- Flask API for receiving prediction input
+- Kafka for message streaming
+- gRPC microservice for saving results
+- SQLite for persistent storage
+- Classification and Regression ML models (Iris dataset)
 
 ## 📌 Project Structure
 
-```
+````
 
 ml\_pipeline/
 ├── flask\_api.py              # Input validation + Kafka publisher
@@ -40,19 +36,17 @@ ml\_pipeline/
 ---
 
 ## 🚀 Setup Instructions
-
-### 1. 🔧 Install Requirements
+```
+## 1. 🔧 Install Requirements
 
 ```bash
 pip install flask joblib scikit-learn confluent-kafka grpcio grpcio-tools
 ````
-
----
-
+```
 ### 2. ⚙️ Start Kafka (using Confluent CLI)
 
 ```bash
-confluent local services start
+confluent local kafka start
 confluent local kafka topic create manage
 ```
 
@@ -61,20 +55,20 @@ confluent local kafka topic create manage
 ### 3. 📡 Run gRPC Server
 
 ```bash
-python grpc/store_server.py
+python store_server.py
 ```
 
 ---
 
 ### 4. 🧪 Run Subscribers (in separate terminals)
 
-* **Classification Subscriber**
+ **Classification Subscriber**
 
 ```bash
 python subscriber1.py
 ```
 
-* **Regression Subscriber**
+ **Regression Subscriber**
 
 ```bash
 python subscriber2.py
@@ -85,7 +79,7 @@ python subscriber2.py
 ### 5. 🌐 Run Flask API (Publisher)
 
 ```bash
-python flask_api.py
+python server.py
 ```
 
 Then send a POST request:
@@ -180,3 +174,4 @@ message ClassifyResponse {
 🎓 B.Tech CSE (Data Science) | The Neotia University
 🧠 Focus: ML, Deep Learning, Microservices
 📫 *Drop a message if you'd like to collaborate!*
+---
