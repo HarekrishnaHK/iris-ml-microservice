@@ -46,6 +46,7 @@ pip install flask joblib scikit-learn confluent-kafka grpcio grpcio-tools
 ````
 ---
 ---
+
 ### 2. ⚙️ Start Kafka (using Confluent CLI)
 
 ```bash
