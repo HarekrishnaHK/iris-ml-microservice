@@ -11,7 +11,7 @@ This project demonstrates a Machine Learning pipeline using:
 
 ## 📌 Project Structure
 
-```
+````
 
 ml\_pipeline/
 ├── flask\_api.py              # Input validation + Kafka publisher
@@ -31,7 +31,7 @@ ml\_pipeline/
 ├── store\_results.db          # SQLite database
 └── init\_db.py                # DB setup script
 
-```
+````
 
 ---
 
