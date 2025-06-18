@@ -35,21 +35,24 @@ ml\_pipeline/
 
 ---
 
-## 🚀 Setup Instructions
-```
-## 1. 🔧 Install Requirements
+### 🚀 Setup Instructions
+
+---
+---
+### 1. 🔧 Install Requirements
 
 ```bash
 pip install flask joblib scikit-learn confluent-kafka grpcio grpcio-tools
 ````
-```
+---
+---
 ### 2. ⚙️ Start Kafka (using Confluent CLI)
 
 ```bash
 confluent local kafka start
 confluent local kafka topic create manage
 ```
-
+---
 ---
 
 ### 3. 📡 Run gRPC Server
